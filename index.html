@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    <nav class="navbar">
+        <div class="logo">MovieMate</div>
+        <button id="theme-toggle" aria-label="Toggle Theme">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </nav>
+
+    <main>
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Unlimited movies, TV shows, and more.</h1>
+                <p>Search anywhere. Filter anytime.</p>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search for movies...">
+                    <button id="search-btn">
+                        Get Started
+                        <svg viewBox="0 0 24 24" fill="none" class="chevron-icon" xmlns="http://www.w3.org/2000/svg"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class="controls-section hidden" id="controls-section">
+            <div class="controls-inner">
+                <span class="filter-label">Filter & Sort results:</span>
+                <div class="controls">
+                    <div class="select-wrapper">
+                        <select id="year-filter">
+                            <option value="">All Years</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="sort-select">
+                            <option value="default">Sort By Relevance</option>
+                            <option value="title-asc">Title (A-Z)</option>
+                            <option value="title-desc">Title (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div id="loading-spinner" class="hidden"></div>
+            <div id="movie-container" class="movie-grid"></div>
+        </section>
+
+        <section class="favorites-section">
+            <h2 class="section-title">My List</h2>
+            <div id="favorites-container" class="movie-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Questions? Call 000-800-000-0000</p>
+            <p class="footer-bottom">&copy; 2026 MovieMate. Built with HTML, CSS, JS.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
